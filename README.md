@@ -1,4 +1,4 @@
-<h1 align="center">
+<!-- <h1 align="center">
 <img width="40" valign="bottom" src="https://ultimateangular.com/assets/img/categories/typescript.svg">
 TypeScript: Basics Course Seed
 </h1>
@@ -78,4 +78,4 @@ further about to dive deeper or understand in more detail what they are:
 
 * [TypeScript Docs](https://www.typescriptlang.org)
 * [TypeScript Playground](https://www.typescriptlang.org/play)
-* [AST Explorer](https://astexplorer.net)
+* [AST Explorer](https://astexplorer.net) -->
