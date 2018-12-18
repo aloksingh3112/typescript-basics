@@ -1,15 +1,11 @@
-let obj={
-    gg:'alok',
-    aaja:'pani'
+const firstNum:number =10;
+const secondNum:number=20;
+
+
+function calcSum(a:number,b:number):number{
+   return a+b
 }
 
-let ong={
-    aa:'nope'
-}
+const sum=calcSum(firstNum,secondNum);
 
-const result={
-   ...obj,
-   ...ong
-}
-
-console.log(result);
+console.log(`sum is ${sum}`);
