@@ -14,12 +14,22 @@
 
 /*  *** Void Type    ***  */
 
-let firstname:string="alok";
+// let firstname:string="alok";
 
-function setName(name:string):void{
-   firstname=name
+// function setName(name:string):void{
+//    firstname=name
+// }
+// console.log(firstname);
+// setName("avinash");
+// console.log(firstname);
+
+
+/*  *** never type    ***  */
+
+function neverType(error:string):never{
+   throw new Error(error);
+   // code after this is unreachable so it will never return
+
 }
-console.log(firstname);
-setName("avinash");
-console.log(firstname);
+neverType("not available");
 
