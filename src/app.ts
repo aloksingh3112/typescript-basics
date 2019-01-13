@@ -26,10 +26,21 @@
 
 /*  *** never type    ***  */
 
-function neverType(error:string):never{
-   throw new Error(error);
-   // code after this is unreachable so it will never return
+// function neverType(error:string):never{
+//    throw new Error(error);
+//    // code after this is unreachable so it will never return
 
-}
-neverType("not available");
+// }
+// neverType("not available");
+
+/*  *** union type  ***  */
+
+function union(a:string|number):void{
+   console.log(a);
+};
+
+union("alok");
+
+
+
 
