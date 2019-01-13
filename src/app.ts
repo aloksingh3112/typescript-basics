@@ -54,16 +54,31 @@
 
 /*  *** object type ***  */
 
-let sum:{num1:number,num2:number,getSum():number};
+// let sum:{num1:number,num2:number,getSum():number};
 
-sum={
-  num1:6,
-  num2:7,
-  getSum(){
-     return sum.num1+sum.num2
-  } 
-}
+// sum={
+//   num1:6,
+//   num2:7,
+//   getSum(){
+//      return sum.num1+sum.num2
+//   } 
+// }
 
 
-console.log(sum.getSum());
+// console.log(sum.getSum());
+
+/*  *** tuple type in array ***  */
+
+let arr:[string,number,boolean];
+arr=["alok",20,true];
+
+
+/*  *** type alias type ***  */
+ type num=number;
+ type calc=(num1:num,num2:num)=>number;
+
+ let add:calc=(x,y)=>x+y
+
+ console.log(add(2,3));
+ 
 
