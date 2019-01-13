@@ -46,10 +46,24 @@
 
 /*  *** function type***  */
 
- let sum: (num1:number,num2:number,num3?:number)=>number;
+//  let sum: (num1:number,num2:number,num3?:number)=>number;
 
- sum=(w,x,y=1)=>w+x+y;
- console.log(sum(5,6));
+//  sum=(w,x,y=1)=>w+x+y;
+//  console.log(sum(5,6));
 
 
+/*  *** object type ***  */
+
+let sum:{num1:number,num2:number,getSum():number};
+
+sum={
+  num1:6,
+  num2:7,
+  getSum(){
+     return sum.num1+sum.num2
+  } 
+}
+
+
+console.log(sum.getSum());
 
