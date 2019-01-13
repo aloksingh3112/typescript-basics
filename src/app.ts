@@ -35,12 +35,21 @@
 
 /*  *** union type  ***  */
 
-function union(a:string|number):void{
-   console.log(a);
-};
 
-union("alok");
+// function union(a:string|number):void{
+//    console.log(a);
+// };
 
+// union("alok");
+
+
+
+/*  *** function type***  */
+
+ let sum: (num1:number,num2:number,num3?:number)=>number;
+
+ sum=(w,x,y=1)=>w+x+y;
+ console.log(sum(5,6));
 
 
 
