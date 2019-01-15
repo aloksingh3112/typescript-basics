@@ -84,31 +84,54 @@
 
 // /*  *** interface type ***  */
 
-interface sizes{
-    sizes:string[]
-}
+// interface sizes{
+//     sizes:string[]
+// }
 
 
-interface user extends sizes{
-    name:string,
+// interface user extends sizes{
+//     name:string,
 
-    getSize():string[]
-}
+//     getSize():string[]
+// }
 
-let person:user;
+// let person:user;
 
-function createUser(name:string,sizes:string[]):user{
-    return {
-        name,
-        sizes,
-        getSize(){
-            return this.sizes
-        }
-    }
+// function createUser(name:string,sizes:string[]):user{
+//     return {
+//         name,
+//         sizes,
+//         getSize(){
+//             return this.sizes
+//         }
+//     }
 
-}
+// }
 
-createUser("alok",["small","medium","large"]);
+// createUser("alok",["small","medium","large"]);
+
+
+
+ /*  ***  class ***  */
+
+ class User{
+     sizes:string[]=[];
+     constructor(public name:string) {
+         
+     }
+
+     setSize(size:string):void{
+         this.sizes.push(size);
+
+     }
+
+ }
+
+ const user=new User("alok");
+ user.setSize("ggs");
+ console.log(user.name);
+
+
 
  
 
