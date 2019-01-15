@@ -69,16 +69,36 @@
 
 /*  *** tuple type in array ***  */
 
-let arr:[string,number,boolean];
-arr=["alok",20,true];
+// let arr:[string,number,boolean];
+// arr=["alok",20,true];
 
 
-/*  *** type alias type ***  */
- type num=number;
- type calc=(num1:num,num2:num)=>number;
+// /*  *** type alias type ***  */
+//  type num=number;
+//  type calc=(num1:num,num2:num)=>number;
 
- let add:calc=(x,y)=>x+y
+//  let add:calc=(x,y)=>x+y
 
- console.log(add(2,3));
+//  console.log(add(2,3));
+
+
+// /*  *** type alias type ***  */
+interface user{
+    name:string,
+    size:string[]
+}
+
+let person:user;
+
+function createUser(name:string,size:string[]):user{
+    return {
+        name,
+        size
+    }
+
+}
+
+createUser("alok",["small","medium","large"]);
+
  
 
