@@ -82,18 +82,28 @@
 //  console.log(add(2,3));
 
 
-// /*  *** type alias type ***  */
-interface user{
+// /*  *** interface type ***  */
+
+interface sizes{
+    sizes:string[]
+}
+
+
+interface user extends sizes{
     name:string,
-    size:string[]
+
+    getSize():string[]
 }
 
 let person:user;
 
-function createUser(name:string,size:string[]):user{
+function createUser(name:string,sizes:string[]):user{
     return {
         name,
-        size
+        sizes,
+        getSize(){
+            return this.sizes
+        }
     }
 
 }
