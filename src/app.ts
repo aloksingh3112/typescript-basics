@@ -176,12 +176,32 @@
 
 /*  ***  no Implicit this ***  */
 
-const element=document.querySelector('.click');
-function addEvent(this:HTMLAnchorElement,event:Event){
-    event.preventDefault();
-    console.log(this);
+// const element=document.querySelector('.click');
+// function addEvent(this:HTMLAnchorElement,event:Event){
+//     event.preventDefault();
+//     console.log(this);
 
+// }
+
+
+// element.addEventListener('click',addEvent,false)
+
+
+
+/*  ***  typeof query ***  */
+
+const person={
+    name:"alok",
+    age:19
+}
+
+type user= typeof person;
+
+const anotherPerson:user={
+    name:"avinash",
+    age:10
+    
 }
 
 
-element.addEventListener('click',addEvent,false)
+
