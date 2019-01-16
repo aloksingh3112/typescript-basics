@@ -196,6 +196,9 @@ const person={
 }
 
 type user= typeof person;
+type user2=keyof user;
+
+type user3= user[user2]
 
 const anotherPerson:user={
     name:"avinash",
