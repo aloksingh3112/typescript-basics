@@ -161,13 +161,27 @@
 // instance.myFunction();
 
 
-var obj={
-    name(){
-        console.log(this);
-        return (()=>{
-          console.log(this);
-        })()
-    }
+// var obj={
+//     name(){
+//         console.log(this);
+//         return (()=>{
+//           console.log(this);
+//         })()
+//     }
+// }
+
+// obj.name();
+
+
+
+/*  ***  no Implicit this ***  */
+
+const element=document.querySelector('.click');
+function addEvent(this:HTMLAnchorElement,event:Event){
+    event.preventDefault();
+    console.log(this);
+
 }
 
-obj.name();
+
+element.addEventListener('click',addEvent,false)
