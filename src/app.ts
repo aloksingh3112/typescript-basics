@@ -134,28 +134,40 @@
 
 /*  ***  this keyword ***  */
 
-function myFunction(){
-    console.log(this);
-}
-myFunction();
+// function myFunction(){
+//     console.log(this);
+// }
+// myFunction();
 
-const myObj={
-    myFunction:()=>{
-       return {
-            inner:()=>{
-                console.log(this);
-            }
-        }
-    }
-}
+// const myObj={
+//     myFunction:()=>{
+//        return {
+//             inner:()=>{
+//                 console.log(this);
+//             }
+//         }
+//     }
+// }
 
-myObj.myFunction().inner();
+// myObj.myFunction().inner();
 
-class myClass{
-    myFunction=()=>{
-        console.log(this);
-    }
-}
+// class myClass{
+//     myFunction=()=>{
+//         console.log(this);
+//     }
+// }
  
-const instance=new myClass();
-instance.myFunction();
+// const instance=new myClass();
+// instance.myFunction();
+
+
+var obj={
+    name(){
+        console.log(this);
+        return (()=>{
+          console.log(this);
+        })()
+    }
+}
+
+obj.name();
