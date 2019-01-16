@@ -114,24 +114,48 @@
 
  /*  ***  class ***  */
 
- class User{
-     sizes:string[]=[];
-     constructor(public name:string) {
+//  class User{
+//      sizes:string[]=[];
+//      constructor(public name:string) {
          
-     }
+//      }
 
-     setSize(size:string):void{
-         this.sizes.push(size);
+//      setSize(size:string):void{
+//          this.sizes.push(size);
 
-     }
+//      }
 
- }
+//  }
 
- const user=new User("alok");
- user.setSize("ggs");
- console.log(user.name);
+//  const user=new User("alok");
+//  user.setSize("ggs");
+//  console.log(user.name);
 
 
+/*  ***  this keyword ***  */
 
+function myFunction(){
+    console.log(this);
+}
+myFunction();
+
+const myObj={
+    myFunction:()=>{
+       return {
+            inner:()=>{
+                console.log(this);
+            }
+        }
+    }
+}
+
+myObj.myFunction().inner();
+
+class myClass{
+    myFunction=()=>{
+        console.log(this);
+    }
+}
  
-
+const instance=new myClass();
+instance.myFunction();
